@@ -1,4 +1,4 @@
-<img src="" align="center" height="50%" width="50%">
+<img src="assets/gfinderlogo.png" align="center" height="50%" width="50%">
 
 # **GFinder (GUI Finder)**
 
