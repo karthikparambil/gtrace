@@ -1,10 +1,27 @@
 <img src="assets/gfinderlogo.png" align="center" height="50%" width="50%">
 
-# **GFinder (GUI Finder)**
+# **GFinder (GUI Finder) V2.1**
 
 **GFinder** is a powerful, locally-hosted web utility to perform deep system enumeration, regex pattern matching, and artifact hunting across your local file system.
 
 Unlike standard command-line tools like grep or find, GFinder offers an interactive GUI with context visualization, making it easier to spot hardcoded secrets, analyze code flow, and audit file structures.
+
+### **🆕 What's New in v2.1**
+
+* **Smart Deep Scan:** Scans are now safer and faster by default, stopping at 10,000 items to prevent browser lag. A "Continue Deep Scan" button allows you to bypass this limit for full system auditing.  
+* **Linux Command Generator:** Learn while you scan\! The tool now dynamically displays the equivalent Linux find or grep command for your current search settings.  
+* **New Filters:** Added a "Non-Executables" filter and a toggle to include/exclude hidden files (dotfiles).
+
+### **Advanced Scoping**
+
+* **Multi-Target Search:** Search within **File Content**, **File Names**, **Directory Names** simultaneously.  
+* **Exact Match Mode:** Eliminate false positives by enforcing strict start/end matching (e.g., finding key won't return keyboard).  
+* **Deep Filtering:**  
+  * **File Type:** Filter by Text, Binary, Executables, or Non-Executables.  
+  * **Extensions:** Whitelist specific extensions (e.g., py, js, conf, pem).  
+  * **Hidden Files:** Option to include or exclude hidden dotfiles (e.g., .env, .git).  
+  * **Root Path:** Set any directory as the starting point (e.g., /var/www, C:\\Users\\Admin).
+
 
 ## **🚀 Features**
 
