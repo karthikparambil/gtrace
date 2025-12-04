@@ -1,10 +1,10 @@
-<img src="assets/1764776821369.png" align="center" height="50%" width="50%">
+<img src="" align="center" height="50%" width="50%">
 
-# **GTrace (GUI Trace)**
+# **GFinder (GUI Finder)**
 
-**GTrace** is a powerful, locally-hosted web utility to perform deep system enumeration, regex pattern matching, and artifact hunting across your local file system.
+**GFinder** is a powerful, locally-hosted web utility to perform deep system enumeration, regex pattern matching, and artifact hunting across your local file system.
 
-Unlike standard command-line tools like grep or find, GTrace offers an interactive GUI with context visualization, making it easier to spot hardcoded secrets, analyze code flow, and audit file structures.
+Unlike standard command-line tools like grep or find, GFinder offers an interactive GUI with context visualization, making it easier to spot hardcoded secrets, analyze code flow, and audit file structures.
 
 ## **🚀 Features**
 
@@ -31,9 +31,9 @@ Unlike standard command-line tools like grep or find, GTrace offers an interacti
 ## **🛠️ Installation**
 
 1. Clone or Download the Script  
-   Save the tool script as gtrace.py.  
+   Save the tool script as gfinder.py.  
 2. Install Dependencies  
-   GTrace only requires Flask to run the web server.  
+   GFinder only requires Flask to run the web server.  
    pip install flask
 
 ## **💻 Usage**
@@ -41,7 +41,7 @@ Unlike standard command-line tools like grep or find, GTrace offers an interacti
 1. Start the Tool  
    Run the script from your terminal:
    ```
-   python3 gtrace.py
+   python3 gfinder.py
    ```
 
 3. Access the Interface  
@@ -94,7 +94,7 @@ Unlike standard command-line tools like grep or find, GTrace offers an interacti
 
 ## **⚠️ Security Warning**
 
-GTrace runs with the permissions of the user who executes the Python script.
+GFinder runs with the permissions of the user who executes the Python script.
 
 * **Do not** host this on a public IP address.  
 * **Do not** run this script as root or Administrator unless absolutely necessary, as it exposes your entire file system to the web interface (even if local).
