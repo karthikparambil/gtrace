@@ -6,6 +6,8 @@
 
 Unlike standard command-line tools like grep or find, GFinder offers an interactive GUI with context visualization, making it easier to spot hardcoded secrets, analyze code flow, and audit file structures.
 
+<img src="assets/gfinder.png">
+
 ### **🆕 What's New in v2.1**
 
 * **Smart Deep Scan:** Scans are now safer and faster by default, stopping at 10,000 items to prevent browser lag. A "Continue Deep Scan" button allows you to bypass this limit for full system auditing.  
