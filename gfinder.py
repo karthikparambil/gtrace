@@ -38,7 +38,6 @@ TEMPLATE = """
             overflow: hidden;
         }
 
-        /* --- Header & Toolbar --- */
         header {
             background-color: var(--bg-card);
             border-bottom: 1px solid var(--border);
@@ -118,7 +117,6 @@ TEMPLATE = """
         .btn-primary:hover { background-color: var(--accent-hover); }
         .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
 
-        /* Warning / Continue Button */
         .btn-warning {
             background-color: #f59e0b;
             color: #0f172a;
@@ -163,7 +161,6 @@ TEMPLATE = """
             font-weight: 600;
         }
 
-        /* --- Command Box --- */
         .command-box {
             background-color: #09090b;
             border: 1px solid #27272a;
@@ -187,12 +184,11 @@ TEMPLATE = """
             display: block;
         }
 
-        /* --- Main Content --- */
         main {
             flex: 1;
             overflow-y: auto;
             padding: 1.5rem;
-            position: relative; /* For loader positioning */
+            position: relative;
         }
 
         .stats-bar {
@@ -271,7 +267,6 @@ TEMPLATE = """
             border-bottom: 1px solid var(--match-highlight);
         }
 
-        /* --- Unique Loader (Radar Ripple) --- */
         .scan-container {
             display: flex;
             flex-direction: column;
@@ -316,7 +311,6 @@ TEMPLATE = """
         }
         @keyframes blink { 50% { opacity: 0.5; } }
         
-        /* Helper for type badge */
         .badge {
             display: inline-block;
             padding: 2px 6px;
@@ -337,7 +331,6 @@ TEMPLATE = """
 <header>
     <div class="title-row">
         <div class="logo-container">
-            <!-- Inline SVG Logo -->
             <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient id="tealGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -346,52 +339,37 @@ TEMPLATE = """
                     </linearGradient>
                 </defs>
 
-                <!-- CENTER POINT for everything is (50, 45) to allow handle room at bottom -->
 
-                <!-- 1. The Swirling Arcs (Background) -->
-                <!-- Cyan Middle Ring -->
                 <path d="M 30 65 A 28 28 0 1 1 78 45" 
                       stroke="#00C8C8" 
                       stroke-width="3" 
                       stroke-linecap="round" 
                       fill="none" />
                 
-                <!-- Dark Blue Outer Arrow Ring -->
-                <!-- Radius 36, centered at 50,45 -->
                 <path d="M 28 72 A 36 36 0 1 1 86 45" 
                       stroke="#003399" 
                       stroke-width="4" 
                       stroke-linecap="round" 
                       fill="none" />
                 
-                <!-- Arrow Head on the Blue Ring -->
                 <path d="M 86 45 L 82 38 L 91 39 Z" fill="#003399" />
                 
-                <!-- 2. Magnifying Glass Group -->
                 <g>
-                    <!-- Handle (Bottom Left) -->
-                    <!-- Aligned to point towards center (50,45) -->
                     <rect x="26" y="66" width="10" height="26" rx="5" 
                           transform="rotate(45 31 79)" 
                           fill="#003399" />
                     
-                    <!-- Handle Highlight -->
                     <rect x="29" y="68" width="4" height="20" rx="2" 
                           transform="rotate(45 31 79)" 
                           fill="#00C8C8" />
 
-                    <!-- Lens Rim -->
                     <circle cx="50" cy="45" r="18" 
                             stroke="#003399" 
                             stroke-width="5" 
                             fill="white" />
                 </g>
 
-                <!-- 3. The "G" inside the Glass -->
-                <!-- Centered at 50,45 -->
                 <g transform="translate(50, 45)">
-                    <!-- A "G" shape drawn with paths -->
-                    <!-- Upper arc of G -->
                     <path d="M 8 -8 A 10 10 0 1 0 0 10 L 0 0 L 8 0" 
                           stroke="#00C8C8" 
                           stroke-width="4" 
@@ -408,7 +386,6 @@ TEMPLATE = """
         <input type="text" id="searchTerm" placeholder="Search string or Regex..." autofocus>
         <input type="text" id="rootPath" placeholder="Root Path (e.g. /var/www or C:\\Users)">
         
-        <!-- Search Target -->
         <select id="searchTarget">
             <option value="content">Find in: File Content</option>
             <option value="filename">Find in: File Names</option>
@@ -419,7 +396,6 @@ TEMPLATE = """
     </div>
 
     <div class="advanced-filters">
-        <!-- File Type Filter -->
         <div>
             <label class="input-label">File Type</label>
             <select id="fileType">
@@ -431,13 +407,11 @@ TEMPLATE = """
             </select>
         </div>
 
-        <!-- Extension Filter -->
         <div>
             <label class="input-label">Extensions (Optional)</label>
             <input type="text" id="extensions" placeholder="e.g. py, js, log">
         </div>
 
-        <!-- Toggles -->
         <div class="toggle-group" style="grid-column: span 2; align-self: end; padding-bottom: 5px;">
             <label class="toggle-label">
                 <input type="checkbox" id="useRegex"> Regex
